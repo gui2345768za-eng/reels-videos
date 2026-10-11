@@ -1,0 +1,33 @@
+name: Publicar Reels agendados
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # a cada 5 minutos
+  workflow_dispatch:         # permite rodar manualmente
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-reels
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Publicar o que venceu
+        env:
+          IG_ID: ${{ secrets.IG_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python nuvem/publicar.py
