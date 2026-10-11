@@ -88,9 +88,6 @@ def publicar_no_instagram(item):
     }
     if str(item.get("capa_url", "")).startswith("https://"):
         corpo["cover_url"] = item["capa_url"]
-    elif item.get("capa_segundo"):
-        segundos = float(str(item["capa_segundo"]).replace(",", "."))
-        corpo["thumb_offset"] = str(int(segundos * 1000))
 
     r = requests.post(f"{API}/{IG_ID}/media", data=corpo, timeout=60)
     dados = r.json()
