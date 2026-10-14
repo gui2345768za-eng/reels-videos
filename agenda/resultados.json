@@ -78,5 +78,9 @@
     "status": "Erro",
     "erro": "Erro ao criar contêiner: Error validating access token: You cannot access the app till you log in to www.instagram.com and follow the instructions given.",
     "quando": "2026-10-14T05:31:23.560174+00:00"
+  },
+  "ac6f597446304155888544f6b66d71f6": {
+    "status": "Publicando",
+    "quando": "2026-10-14T15:27:58.654981+00:00"
   }
 }
