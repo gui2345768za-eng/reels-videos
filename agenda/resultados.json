@@ -250,7 +250,8 @@
     "quando": "2026-10-18T14:35:31.903122+00:00"
   },
   "ae17cc80d8ab4157bf3a9be414fe5ab3": {
-    "status": "Publicando",
-    "quando": "2026-10-18T17:32:58.205216+00:00"
+    "status": "Erro",
+    "erro": "Erro ao criar contêiner: Error validating access token: You cannot access the app till you log in to www.instagram.com and follow the instructions given.",
+    "quando": "2026-10-18T17:32:59.644259+00:00"
   }
 }
